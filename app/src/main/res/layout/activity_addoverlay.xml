@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.AddOverLayOptions">
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/add_bdMapView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clickable="true" />
+
+    <LinearLayout
+        android:id="@+id/allBtn_add_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_bdMapView"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_add_normalMap_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="普通地图" />
+
+        <Button
+            android:id="@+id/btn_add_satelliteMap_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="卫星地图" />
+
+        <Button
+            android:id="@+id/btn_add_trafficMap_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="交通地图" />
+
+        <Button
+            android:id="@+id/btn_add_heatMap_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="热力地图" />
+
+        <ToggleButton
+            android:id="@+id/btn_add_control_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="false"
+            android:textOn="全部关闭"
+            android:textOff="全部开启" />
+    </LinearLayout>
+</LinearLayout>
