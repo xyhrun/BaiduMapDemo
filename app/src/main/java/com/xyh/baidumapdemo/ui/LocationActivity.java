@@ -13,7 +13,6 @@ import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
 import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.map.BaiduMap;
-import com.baidu.mapapi.map.BitmapDescriptorFactory;
 import com.baidu.mapapi.map.MapStatus;
 import com.baidu.mapapi.map.MapStatusUpdate;
 import com.baidu.mapapi.map.MapStatusUpdateFactory;
@@ -91,8 +90,10 @@ public class LocationActivity extends Activity implements View.OnClickListener, 
 //        罗盘态，显示定位方向圈，保持定位图标在地图中心 COMPASS
 //        跟随态，保持定位图标在地图中心 FOLLOWING
 //        普通态： 更新定位数据时不对地图做任何操作  NORMAL
+//        mBaiduMap.setMyLocationConfigeration(new MyLocationConfiguration(MyLocationConfiguration.LocationMode.COMPASS
+//                , true, BitmapDescriptorFactory.fromResource(R.mipmap.pos2)));自定义图标
         mBaiduMap.setMyLocationConfigeration(new MyLocationConfiguration(MyLocationConfiguration.LocationMode.COMPASS
-                , true, BitmapDescriptorFactory.fromResource(R.mipmap.pos2)));
+                , true, null));//默认图标
     }
 
     private void setClick() {
